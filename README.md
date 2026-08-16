@@ -50,7 +50,7 @@ sudo apt install nodejs imagemagick libhidapi-hidraw0
 3. Download `70-opendeck-galleon.rules` from the same release and install it:
 
    ```sh
-   sudo install -Dm644 packaging/70-opendeck-galleon.rules /etc/udev/rules.d/70-opendeck-galleon.rules
+   sudo install -Dm644 70-opendeck-galleon.rules /etc/udev/rules.d/70-opendeck-galleon.rules
    sudo udevadm control --reload-rules
    sudo udevadm trigger --subsystem-match=hidraw
    ```
