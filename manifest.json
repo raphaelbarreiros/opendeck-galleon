@@ -1,0 +1,15 @@
+{
+	"Name": "Galleon 100 SD device support",
+	"Description": "Unofficial OpenDeck device support for the Corsair Galleon 100 SD",
+	"Author": "Raphael Barreiros and contributors",
+	"Version": "0.1.0",
+	"PluginUUID": "io.github.raphaelbarreiros.opendeck-galleon",
+	"CodePathLin": "src/main.mjs",
+	"Icon": "assets/plugin",
+	"Category": "Hardware",
+	"OS": [
+		{ "Platform": "linux" }
+	],
+	"Actions": [],
+	"DeviceNamespace": "g1"
+}

@@ -1,0 +1,2 @@
+# Corsair Galleon 100 SD Stream Deck interface
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1b1c", ATTRS{idProduct}=="2b18", MODE="0660", TAG+="uaccess"
