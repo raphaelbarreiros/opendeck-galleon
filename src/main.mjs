@@ -149,7 +149,8 @@ function processBridgeLine(line) {
 				await setLcdBackground();
 				send({ event: "rerenderImages", payload: DEVICE_ID });
 			})
-			.catch((error) => console.error(`LCD background failed: ${error.message}`));
+			.catch((error) => console.error(`LCD background failed: ${error.message}`))
+			.finally(drainImageQueue);
 	}
 }
 
@@ -341,7 +342,7 @@ function imageEventKey(event) {
 }
 
 function drainImageQueue() {
-	if (imageQueueRunning) return;
+	if (!bridgeReady || imageQueueRunning) return;
 	imageQueueRunning = true;
 	imageQueue = imageQueue
 		.then(async () => {
